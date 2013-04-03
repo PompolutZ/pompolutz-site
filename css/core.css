@@ -1,0 +1,58 @@
+@font-face {
+  font-family: 'Arvo';
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://themes.googleusercontent.com/static/fonts/arvo/v5/WJ6D195CfbTRlIs49IbkFw.woff) format('woff');
+}
+
+div#main {
+	margin: 0px auto 0px auto;
+	width: 960px;
+	font-family: sans-serif;
+}
+
+aside {
+	font-family: Arvo, sans-serif;
+	margin-right: 30px;
+	width: 250px;
+	float: left;
+}
+
+aside h1 {
+	font-size: 30px;
+	font-weight: 300;
+	float: right;
+}
+
+aside div#navigation a {
+	clear: both;
+	float: right;
+	margin-bottom: 10px;
+	text-transform: uppercase;
+	text-decoration: none;
+	color: black;
+}
+
+article {
+	padding-top: 10px;
+	float: right;
+	width: 670px;
+}
+
+article h2 {
+	font-size: 24px;
+	border-bottom: 1px solid #ccc;
+	padding-bottom: 5px;
+	font-family: Arvo, Monaco, serif;
+	font-weight: normal;
+}
+
+footer {
+	clear: both;
+	padding-top: 30px;
+	text-align: center;
+}
+
+footer a {
+	color: black;
+}

@@ -1,0 +1,10 @@
+# localy generated caches
+_cache
+
+# generated site
+_site
+
+# build generated files
+*.exe
+*.o
+*.hi
