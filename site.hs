@@ -29,6 +29,26 @@ main = hakyll $ do
             >>= loadAndApplyTemplate "templates/default.html" postCtx
             >>= relativizeUrls
 
+    match "projects/*" $ do
+        route $ setExtension "html"
+        compile $ pandocCompiler
+            >>= loadAndApplyTemplate "templates/project.html" postCtx
+            >>= loadAndApplyTemplate "templates/default.html" postCtx
+            >>= relativizeUrls        
+
+    create ["projects.html"] $ do
+        route idRoute
+        compile $ do
+            let projectsCtx =
+                    field "projects" (\_ -> projectList recentFirst) `mappend`
+                    constField "title" "Projects"                    `mappend`
+                    defaultContext
+
+            makeItem ""
+                >>= loadAndApplyTemplate "templates/projects.html" projectsCtx
+                >>= loadAndApplyTemplate "templates/default.html"  projectsCtx
+                >>= relativizeUrls            
+
     create ["archive.html"] $ do
         route idRoute
         compile $ do
@@ -41,7 +61,6 @@ main = hakyll $ do
                 >>= loadAndApplyTemplate "templates/archive.html" archiveCtx
                 >>= loadAndApplyTemplate "templates/default.html" archiveCtx
                 >>= relativizeUrls
-
 
     match "index.html" $ do
         route idRoute
@@ -70,3 +89,11 @@ postList sortFilter = do
     itemTpl <- loadBody "templates/post-item.html"
     list    <- applyTemplateList itemTpl postCtx posts
     return list
+
+-------------------------------------------------------------------------------
+projectList :: ([Item String] -> [Item String]) -> Compiler String
+projectList sortFilter = do
+    projects <- sortFilter <$> loadAll "projects/*"
+    itemTpl  <- loadBody "templates/project-item.html"
+    list     <- applyTemplateList itemTpl postCtx projects
+    return list    
