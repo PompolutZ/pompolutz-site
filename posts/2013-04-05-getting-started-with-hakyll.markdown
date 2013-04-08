@@ -4,7 +4,7 @@ title: Getting started with Hakyll
 
 #Introduction
 
-One day you\'ve decided, like I did, to create your personal page with/or without blog. There are plenty of ways to do this, depending on your personal programming experience, level of lazyness and geekness. But I guess that making your personal page just to show off yourself don\'t require buying hosting and domain to create complex and mature website. So the most simple way to reach mentioned goal is to create a static website. Because:
+One day you decided, like I did, to create your personal page with/or without blog. There are plenty of ways to do this, depending on your personal programming experience, level of lazyness and geekness. But I guess that making your personal page just to show off yourself don\'t require buying hosting and domain to create complex and mature website. So the most simple way to reach mentioned goal is to create a static website. Because:
 
 > Static sites are fast, secure, easy to deploy, and manageable using version control.
 
