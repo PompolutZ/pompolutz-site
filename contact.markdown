@@ -2,5 +2,10 @@
 title: Contact
 ---
 
-I live in a small hut in the mountains of Kumano Kodō on Kii Hantō and would not
-like to be contacted.
+I live in Kyiv. 
+
+If you would like to contact me you can do it:
+
+- via email: **pompolutz@gmail.com**
+- skype: **pompolutz**
+- [linkedin](http://www.linkedin.com/in/oleglutsenko)
